@@ -1,0 +1,12 @@
+
+$componentSize: 20rem;
+
+page-home {
+    
+    .serviceLayout {
+        position: relative;
+        width: $componentSize;
+        height: $componentSize;
+        display: inline-block;
+    }
+}

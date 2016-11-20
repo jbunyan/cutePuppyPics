@@ -1,0 +1,117 @@
+
+$componentSize: 20rem;
+$componentSize50pc: 10rem;
+$borderSize: 2rem;
+$borderSidesContent: 4rem;
+$borderTopBottomContent: 4rem;
+$alertBottomPosition: 5rem;
+$alertWidth: 12rem; 
+$utilBottomPosition: 8rem;
+
+my-circle {
+    .wrapper {
+    width: $componentSize; /* Set the size of the progress bar */
+    height: $componentSize;
+    position: absolute; /* Enable clipping */
+    }
+    .circle-background {
+    width: $componentSize;
+    height: $componentSize;
+    border: $borderSize solid #f0f0f0;
+    border-radius: $componentSize50pc;
+    background-color: #c0c0c0;
+    position: absolute;  
+    z-index: -1;      
+    }
+    .circle-content {
+    width: $componentSize;
+    height: $componentSize;
+    padding-left: $borderSidesContent;
+    padding-top: $borderTopBottomContent;
+    padding-right: $borderSidesContent;
+    padding-bottom: $borderTopBottomContent;
+    position: absolute;  
+    color: white;
+    text-align: center;
+    z-index: -1;      
+    }
+    .circle-name {
+        font-size: 2.0rem;
+    }
+    .circle-util {
+        position: absolute;
+        bottom: $utilBottomPosition;
+        width: $alertWidth;
+        height: 2rem;
+    }
+    .circle-alerts {
+        position: absolute;
+        bottom: $alertBottomPosition;
+        width: $alertWidth;
+        height: 2rem;
+        background-color: #a0a0a0;
+        font-size: 1.2rem;
+    }
+    .circle-alerts-critical {
+        display: inline-block;
+        float: left;
+        width: 20%;
+        height: 100%;
+        padding-top: 0.2rem;
+        border-bottom: 0.2rem red solid;
+    }
+    .circle-alerts-major {
+        display: inline-block;
+        float: left;
+        width: 20%;
+        height: 100%;
+        padding-top: 0.2rem;
+        border-bottom: 0.2rem orange solid;
+    }
+    .circle-alerts-minor {
+        display: inline-block;
+        float: left;
+        width: 20%;
+        height: 100%;
+        padding-top: 0.2rem;
+        border-bottom: 0.2rem green solid;
+    }
+    .circle-alerts-warning {
+        display: inline-block;
+        float: left;
+        width: 20%;
+        height: 100%;
+        padding-top: 0.2rem;
+        border-bottom: 0.2rem blue solid;
+    }
+    .circle-alerts-info {
+        display: inline-block;
+        float: left;
+        width: 20%;
+        height: 100%;
+        padding-top: 0.2rem;
+        border-bottom: 0.2rem darkslategrey solid;
+    }
+    /* Set the sizes of the elements that make up the progress bar */
+    .circle-rotator {
+    width: $componentSize;
+    height: $componentSize;
+    border: $borderSize solid green;
+    border-radius: $componentSize50pc;
+    position: absolute;
+    clip: rect(0px, $componentSize50pc, $componentSize, 0px);
+    }
+
+    /* Set the sizes of the elements that make up the progress bar */
+    .circle-rhs {
+    width: $componentSize;
+    height: $componentSize;
+    border: $borderSize solid green;
+    border-radius: $componentSize50pc;
+    position: absolute;
+    clip: rect(0px, $componentSize, $componentSize, $componentSize50pc);
+    }
+    .isClipped {
+    clip: rect(0px, $componentSize, $componentSize, $componentSize50pc)  /* Hide half of the progress bar */
+    }
+}

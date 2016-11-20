@@ -1,0 +1,16 @@
+<div class="circle-background"></div>
+<div class="wrapper" [ngClass]="{'isClipped': isClipped }">
+  <div class="circle-rhs" [style.display] = "rhsDisplay" ></div>
+  <div class="circle-rotator" [style.transform] = "rotationTransform" ></div>
+</div>
+<div class="circle-content">
+  <div class="circle-name">{{service.name}}</div>
+  <div class="circle-util">Utilisation: {{service.percentage}}%</div>
+  <div class="circle-alerts">
+    <div class="circle-alerts-critical">{{service.alerts.critical}}</div>
+    <div class="circle-alerts-major">{{service.alerts.major}}</div>
+    <div class="circle-alerts-minor">{{service.alerts.minor}}</div>
+    <div class="circle-alerts-warning">{{service.alerts.warning}}</div>
+    <div class="circle-alerts-info">{{service.alerts.info}}</div>
+  </div>
+</div>
