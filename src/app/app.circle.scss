@@ -52,44 +52,30 @@ my-circle {
         background-color: #a0a0a0;
         font-size: 1.2rem;
     }
-    .circle-alerts-critical {
-        display: inline-block;
-        float: left;
-        width: 20%;
-        height: 100%;
-        padding-top: 0.2rem;
-        border-bottom: 0.2rem red solid;
-    }
-    .circle-alerts-major {
-        display: inline-block;
-        float: left;
-        width: 20%;
-        height: 100%;
-        padding-top: 0.2rem;
-        border-bottom: 0.2rem orange solid;
-    }
-    .circle-alerts-minor {
-        display: inline-block;
-        float: left;
-        width: 20%;
-        height: 100%;
-        padding-top: 0.2rem;
-        border-bottom: 0.2rem green solid;
-    }
-    .circle-alerts-warning {
-        display: inline-block;
-        float: left;
-        width: 20%;
-        height: 100%;
-        padding-top: 0.2rem;
-        border-bottom: 0.2rem blue solid;
-    }
+    .circle-alerts-critical,
+    .circle-alerts-major,
+    .circle-alerts-minor,
+    .circle-alerts-warning,
     .circle-alerts-info {
         display: inline-block;
         float: left;
         width: 20%;
         height: 100%;
         padding-top: 0.2rem;
+    }
+    .circle-alerts-critical {
+        border-bottom: 0.2rem red solid;
+    }
+    .circle-alerts-major {
+        border-bottom: 0.2rem orange solid;
+    }
+    .circle-alerts-minor {
+        border-bottom: 0.2rem green solid;
+    }
+    .circle-alerts-warning {
+        border-bottom: 0.2rem blue solid;
+    }
+    .circle-alerts-info {
         border-bottom: 0.2rem darkslategrey solid;
     }
     /* Set the sizes of the elements that make up the progress bar */
