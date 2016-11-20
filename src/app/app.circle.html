@@ -6,6 +6,14 @@
 <div class="circle-content">
   <div class="circle-name">{{service.name}}</div>
   <div class="circle-util">Utilisation: {{service.percentage}}%</div>
+  <div class="circle-health">
+    <div [ngSwitch]="healthIndicator">
+      <template [ngSwitchCase]="'ok'"><ion-icon [style.color]="'yellow'" name="happy"></ion-icon></template>
+      <template [ngSwitchCase]="'warning'"> <ion-icon [style.color]="'orange'" name="warning"></ion-icon></template>
+      <template [ngSwitchCase]="'danger'"><ion-icon [style.color]="'red'" name="flame"></ion-icon></template>
+      <template ngSwitchDefault><ion-icon name="help-circle"></ion-icon></template>
+    </div>
+  </div>
   <div class="circle-alerts">
     <div class="circle-alerts-critical">{{service.alerts.critical}}</div>
     <div class="circle-alerts-major">{{service.alerts.major}}</div>

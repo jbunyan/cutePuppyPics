@@ -11,6 +11,7 @@ export class Circle implements OnInit {
   @Input()
   service: Service;
   
+  public healthIndicator: string;
   public rhsDisplay: string;
   rotation: number;
   public rotationTransform: string;
@@ -30,5 +31,11 @@ export class Circle implements OnInit {
       this.rotationTransform = "rotate(" + this.rotation + "deg)";
     }
     console.log(this.rotationTransform);
+
+    // set up health indicator
+
+    if ( this.service.health > 90 ) { this.healthIndicator = "ok" }
+    else if ( this.service.health > 60 ) { this.healthIndicator = "warning" }
+    else { this.healthIndicator = "danger" }
   }
 }

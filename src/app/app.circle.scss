@@ -6,7 +6,8 @@ $borderSidesContent: 4rem;
 $borderTopBottomContent: 4rem;
 $alertBottomPosition: 5rem;
 $alertWidth: 12rem; 
-$utilBottomPosition: 8rem;
+$utilBottomPosition: 7rem;
+$healthBottomPosition: 9rem;
 
 my-circle {
     .wrapper {
@@ -43,6 +44,13 @@ my-circle {
         bottom: $utilBottomPosition;
         width: $alertWidth;
         height: 2rem;
+    }
+    .circle-health {
+        position: absolute;
+        bottom: $healthBottomPosition;
+        width: $alertWidth;
+        height: 2.2rem;
+        font-size: 1.8rem;
     }
     .circle-alerts {
         position: absolute;
